@@ -1,6 +1,6 @@
 from django.apps import apps
 
-from src.base_template.utils import get_class_from_settings, get_settings_value
+from .utils import get_class_from_settings, get_settings_value
 
 
 def get_menu_from_apps(request, menu):
