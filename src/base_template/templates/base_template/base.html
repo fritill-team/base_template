@@ -1,10 +1,10 @@
-{% load static i18n %}
+{% load static i18n base_template %}
 {% get_current_language as LANGUAGE_CODE %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
 <!DOCTYPE html>
 <html {% include "base_template/layout/_localization.html" %}>
 <head>
-  <title></title>
+  <title>{% get_base_template_setting "BASE_TEMPLATE_APP_NAME" %} | {% block title %}{% endblock %}</title>
   <meta charset="utf-8"/>
   <meta name="description" content=""/>
   <meta name="keywords" content=""/>
@@ -24,7 +24,7 @@
     <link href="{% static "base_template/plugins/global/plugins.bundle.css" %}" rel="stylesheet" type="text/css"/>
     <link href="{% static "base_template/css/style.bundle.css" %}" rel="stylesheet" type="text/css"/>
   {% endif %}
-  {% block base_styles %}{% endblock %}
+  {% block styles %}{% endblock %}
 </head>
 <body id="kt_app_body"
       class="app-default"

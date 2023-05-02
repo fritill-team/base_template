@@ -4,8 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 BASE_TEMPLATE_MULTIPLE_LANGUAGES = True
 
-# Logo
-
+BASE_TEMPLATE_APP_NAME = _("Base Template")
 
 # Sidebar
 BASE_TEMPLATE_GET_SIDEBAR_METHOD = 'base_template.sidebars.get_sidebar'

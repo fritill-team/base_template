@@ -11,3 +11,8 @@ def get_lang(name):
         return languages[name]
     else:
         return languages[settings.FALLBACK_LOCALE]
+
+
+@register.simple_tag
+def get_base_template_setting(key):
+    return getattr(settings, key)
