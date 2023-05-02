@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d253e40c-0206-4e0d-aa6f-481e439a075d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/base_template/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_template/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base_template/templates/base_template/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_template/templates/base_template/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base_template/templates/base_template/layout/partials/toolbar/_toolbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_template/templates/base_template/layout/partials/toolbar/_toolbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base_template/templatetags/base_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_template/templatetags/base_template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +101,7 @@
       <workItem from="1678285804107" duration="3071000" />
       <workItem from="1678309805995" duration="25759000" />
       <workItem from="1679262777259" duration="793000" />
-      <workItem from="1683061555245" duration="403000" />
+      <workItem from="1683061555245" duration="478000" />
     </task>
     <servers />
   </component>
