@@ -107,7 +107,7 @@ var addConfirmMessageToApp = function () {
             yes: dataAttrExists($this, 'confirm-yes') ? $this.data('confirm-yes') : gettext('Yes, do it!'),
             no: dataAttrExists($this, 'confirm-no') ? $this.data('confirm-no') : gettext('No, cancel!'),
             cancel: {
-              text: dataAttrExists($this, 'cancel-message') ? $this.data('cancel-message') : gettext("Your action has not been cancelled!."),
+              text: dataAttrExists($this, 'cancel-message') ? $this.data('cancel-message') : gettext("Your action will be cancelled!."),
               icon: dataAttrExists($this, 'cancel-icon') ? $this.data('cancel-icon') : "error",
               button: dataAttrExists($this, 'cancel-action') ? $this.data('cancel-action') : gettext("Ok, got it!"),
             },
