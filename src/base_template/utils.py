@@ -73,7 +73,8 @@ def get_assets(request):
     ]
     js = [
         static("base_template/plugins/global/plugins.bundle.js"),
-        static("base_template/js/scripts.bundle.js")
+        static("base_template/js/scripts.bundle.js"),
+        static("base_template/js/utils.js")
     ]
     if get_settings_value("BASE_TEMPLATE_MULTIPLE_LANGUAGES", False):
         from django.urls import reverse
