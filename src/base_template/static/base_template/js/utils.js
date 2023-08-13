@@ -40,7 +40,7 @@ var addConfirmMessageToApp = function () {
             cb = cb[obj]
           }
           if (typeof cb === 'function') {
-            cb.call()
+            cb.call(res)
           }
           // callback.call()
         }
