@@ -53,11 +53,25 @@ def get_assets(request):
     return get_class_from_settings("BASE_TEMPLATE_GET_ASSETS_METHOD")(request)
 
 
+def get_before_content_templates(request):
+    all_apps_conf = apps.get_app_configs()
+    alerts_list = []
+    for app_conf in all_apps_conf:
+        if hasattr(app_conf, "get_before_content") and callable(getattr(app_conf, "get_before_content")):
+            items = getattr(app_conf, "get_before_content")(request)
+            if type(items) == list:
+                alerts_list = alerts_list + items
+            else:
+                alerts_list.append(items)
+
+    return alerts_list
+
+
 def base_template(request):
     return {
         "assets": get_settings_value("BASE_TEMPLATE_ASSETS", get_assets(request)),
         "multiple_languages": get_settings_value("BASE_TEMPLATE_MULTIPLE_LANGUAGES", False),
-
+        "before_content": get_before_content_templates(request),
         "sidebar": {
             "menu": get_sidebar(request),
             "logo": get_settings_value("BASE_TEMPLATE_SIDEBAR_LOGO", None),

@@ -113,3 +113,25 @@ class ExampleConfig(AppConfig):
                 comment="Main Item 8",
             )
         ]
+
+    def get_before_content(self, request):
+        return [
+            {"template_name": "example/alerts_without_context.html", },
+            {
+                "template_name": "example/alerts_with_context.html",
+                "context": {
+                    "items": [
+                        {"title": "This is an alert",
+                         "description": "The alert component can be used to highlight certain parts of your page for higher content visibility."},
+                        {"title": "This is an alert",
+                         "description": "The alert component can be used to highlight certain parts of your page for higher content visibility."},
+                        {"title": "This is an alert",
+                         "description": "The alert component can be used to highlight certain parts of your page for higher content visibility."},
+                        {"title": "This is an alert",
+                         "description": "The alert component can be used to highlight certain parts of your page for higher content visibility."},
+                        {"title": "This is an alert",
+                         "description": "The alert component can be used to highlight certain parts of your page for higher content visibility."},
+                    ]
+                }
+            },
+        ]

@@ -63,6 +63,9 @@
           <!-- End: Toolbar -->
           <div id="kt_app_content" class="app-content  flex-column-fluid ">
             <div id="kt_app_content_container" class="app-container  container-fluid ">
+              {% for item in before_content %}
+                {% include item.template_name with data=item.context %}
+              {% endfor %}
               {% block content %}{% endblock %}
             </div>
           </div>
