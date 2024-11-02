@@ -21,6 +21,9 @@
     <link {% for key, value in asset.items %} {{ key }}="{{ value }}"{% endfor %}>
   {% endfor %}
 
+  {% for asset in assets.head_js %}
+    <script {% for key, value in asset.items %} {{ key }}="{{ value }}"{% endfor %}></script>
+  {% endfor %}
   {% block styles %}{% endblock %}
 </head>
 {% get_base_template_setting "BASE_TEMPLATE_TOOLBAR_FIXED" as BASE_TEMPLATE_TOOLBAR_FIXED %}
@@ -97,7 +100,7 @@
 {% block pre_scripts %}{% endblock %}
 
 {% for asset in assets.js %}
-  <script src="{{ asset }}"></script>
+  <script {% for key, value in asset.items %} {{ key }}="{{ value }}"{% endfor %}></script>
 {% endfor %}
 
 {% get_base_template_setting "BASE_TEMPLATE_MULTIPLE_LANGUAGES" as BASE_TEMPLATE_MULTIPLE_LANGUAGES %}
